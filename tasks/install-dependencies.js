@@ -3,7 +3,7 @@
 module.exports = function (grunt) {
   var exec = require('child_process').exec;
 
-  grunt.registerTask('install-dependencies', 'Installs npm dependencies.', function () {
+  grunt.registerMultiTask('install-dependencies', 'Installs npm dependencies.', function () {
     var cb, options, cp;
 
     cb = this.async();
