@@ -12,7 +12,7 @@ module.exports = function (grunt) {
       });
 
       if (options.stdout || grunt.option('verbose')) {
-        console.log("Running npm install in: " + options.cwd);
+        console.log("Running '" + cmd + "' in: " + options.cwd);
         cp.stdout.pipe(process.stdout);
       }
 
