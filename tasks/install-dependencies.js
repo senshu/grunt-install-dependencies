@@ -28,7 +28,8 @@ module.exports = function (grunt) {
       stdout: true,
       stderr: true,
       failOnError: true,
-      isDevelopment: false
+      isDevelopment: false,
+      audit: false
     });
 
     grunt.verbose.writeflags(options, 'Options');
@@ -36,7 +37,12 @@ module.exports = function (grunt) {
     let install = "npm install"   + (options.isDevelopment ? "" : " --production");
     let fix     = "npm audit fix" + (options.isDevelopment ? "" : " --only=prod");
     execCmd(install, options, () => {
-        execCmd(fix, options, cb);
+        if (options.audit) {
+            execCmd(fix, options, cb);
+        }
+        else {
+            cb();
+        }
     });
   });
 };
