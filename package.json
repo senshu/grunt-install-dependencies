@@ -1,7 +1,7 @@
 {
   "name": "grunt-install-dependencies",
   "description": "Install and update npm dependencies.",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "homepage": "https://github.com/ahutchings/grunt-install-dependencies",
   "repository": {
     "type": "git",

@@ -34,7 +34,7 @@ module.exports = function (grunt) {
     grunt.verbose.writeflags(options, 'Options');
 
     let cmd = "npm install";
-    if(!options.isDevelopment ) cmd += " -production";
+    if(!options.isDevelopment ) cmd += " --production";
     execCmd(cmd, options, () => {
         execCmd("npm audit fix", options, cb);
     });
